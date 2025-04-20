@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nightingale Chart - Apache ECharts Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="coreAdvantageChart">
+    <div class="imgContainer">
+      <img src="Assets/index_05_02.png" alt="">
+    </div>
+    <div class="chartContent">
+      <div class="firstContent">
+        <h1>Research <br> and <br> Development</h1>
+        <p>Group <br> philosophy</p>
+      </div>
+      <div class="secondContent">
+        <h1>Serve</h1>
+        <p>group services</p>
+      </div>
+      <div class="thirdContent">
+        <h1>Smart <br> Manfacturing</h1>
+        <p>INTELLIGENT <br> CREATION</p>
+      </div>
+    </div>
+    <div class="chartAnimtionIcons">
+      <div class="firstAnimtionIcon">
+        <div class="firstAnimtionIconPlusLine">
+          <div class="line"></div>
+          <img src="Assets/research.gif" alt="">
+        </div>
+        <p>Innovation is the primary productive force for Weihua's development</p>
+      </div>
+      <div class="secondAnimtionIcon">
+        <div class="secondAnimtionIconPlusLine">
+          <div class="line"></div>
+          <img src="Assets/industrial-robot.gif" alt="">
+        </div>
+        <p>Keep improving and pursue excellence and high-quality development</p>
+      </div>
+      <div class="thirdAnimtionIcon">
+        <div class="thirdAnimtionIconPlusLine">
+          <div class="line"></div>
+          <img src="Assets/location.gif" alt="">
+        </div>
+        <p>Customer first, creating value</p>
+      </div>
+    </div>
+    <div id="chart-container"></div>
+  </div>
+
+  <!--* Script links  -->
+
+  <script src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
+  <script>
+    var dom = document.getElementById('chart-container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    var option;
+    option = {
+      legend: {
+        top: 'bottom'
+      },
+      toolbox: {
+        show: true,
+        feature: {
+          mark: { show: true },
+          dataView: { show: true, readOnly: false },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      series: [
+        {
+          name: 'Nightingale Chart',
+          type: 'pie',
+          radius: [50, 250],
+          center: ['50%', '50%'],
+          roseType: 'area',
+          itemStyle: {
+            borderRadius: 0
+          },
+          labelLine: {
+                show: false
+              },
+              data: [
+                {
+                  value: 33,
+                  itemStyle: { color: '#E35A45'}
+                },
+                {
+                  value: 30,
+                  itemStyle: { color: '#EE715D'}
+                },
+                {
+                  value: 36,
+                  itemStyle: { color: '#DA3D25'}
+                }
+              ]
+        }
+      ]
+    };
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
