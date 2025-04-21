@@ -1,17 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
-}
-.coreAdvantageChart{
-    position: relative;
-}
-#chart-container{
-    height: 100vh;
-    overflow: hidden;
 }
 .imgContainer{
     z-index: 999;
@@ -29,82 +23,107 @@ body{
 .imgContainer img{
     width: 120px;
 }
-.firstContent{
-    text-align: left;
+.innerChartContainerContent{
+    width: 30%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 35%; left: 33%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
-.firstContent h1{
-    z-index: 99;
+.leftSideChartContent{
+    position: absolute;
+    left: -9%; bottom: 0%;
+}
+.rightSideChartContent{
+    position: absolute;
+    left: 75%; bottom: 100%;
+}
+.bottomSideChartContent{
+    position: absolute;
+    left: 35%; margin-top: 300px;
+}
+
+.leftSideChartContent h1,
+.rightSideChartContent h1,
+.bottomSideChartContent h1{
     color: #fff;
     font-size: 24px;
 }
-.firstContent p{
-    z-index: 99;
-    color: #EE715D;
-}
-.secondContent{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 67%; left: 47%;
-}
-.secondContent h1{
-    z-index: 99;
-    color: #fff;
-    font-size: 24px;
-}
-.secondContent p{
-    z-index: 99;
+.leftSideChartContent p,
+.rightSideChartContent p,
+.bottomSideChartContent p{
     font-size: 14px;
-    color: #F39C8E;
+    text-transform: uppercase;
+    color: rgba(211, 211, 211, 0.63);
 }
-.thirdContent{
-    display: flex;
-    text-align: left;
-    flex-direction: column;
+
+
+.leftSideAnimationContent{
     position: absolute;
-    top: 37%; right: 31%;
+    left: -70%;
 }
-.thirdContent h1{
-    z-index: 99;
-    color: #fff;
-    font-size: 24px;
+.leftSideAnimationImgPlucIcon{
+    display: flex;
+    align-items: center;
 }
-.thirdContent p{
-    z-index: 99;
-    font-size: 14px;
-    color: #EE715D;
+.leftSideAnimationContent .line{
+    width: 200px;
+    height: 2px;    
+    z-index: -1;
+    background-color: #DA3D25;
 }
-.chartAnimtionIcons img{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-.chartAnimtionIcons p{
+.leftSideAnimationContent p{
+    width: 10%;
     color: gray;
     font-size: 14px;
     padding-top: 10px;
 }
-.firstAnimtionIcon{
-    width: 100px;
-    z-index: 9999;
-    position: absolute;
-    top: 30%; left: 22%;
+.leftSideAnimationContent a{
+    opacity: 0;
+    color: #DA3D25;
+    pointer-events: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 1s ease;
+    transform: translateY(20px);
+}
+.leftSideAnimationContent:hover a{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    text-decoration: underline;
 }
 
-.firstAnimtionIconPlusLine .line{
-    width: 200px;
-    height: 2px;
-    z-index: -1;
+
+.rightSideAnimationContent{
     position: absolute;
-    top: 18%; left: 50%;
+    right: -70%;
+}
+.rightSideAnimationImgPlucIcon{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.rightSideAnimationContent .line{
+    width: 200px;
+    height: 2px;    
+    z-index: -1;
     background-color: #DA3D25;
 }
-.firstAnimtionIcon a{
+.rightSideOtherContent{
+    position: absolute;
+    left: 80%;
+}
+.rightSideAnimationContent p{
+    width: 15%;
+    color: gray;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.rightSideAnimationContent a{
+    font-size: 14px;
     opacity: 0;
     color: #DA3D25;
     pointer-events: none;
@@ -113,27 +132,40 @@ body{
     transition: all 1s ease;
     transform: translateY(20px);
 }
-.firstAnimtionIcon:hover a{
+.rightSideAnimationContent:hover a{
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
     text-decoration: underline;
 }
-.secondAnimtionIcon{
-    z-index: 999;
-    width: 100px;
+
+
+.bottomSideAnimationContent{
     position: absolute;
-    top: 30%; right: 22%;
+    left: 70%;
+    margin-top: 300px;
 }
-.secondAnimtionIconPlusLine .line{
+.bottomSideAnimationImgPlucIcon{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.bottomSideAnimationContent .line{
     width: 200px;
-    height: 2px;
+    height: 2px;    
     z-index: -1;
-    position: absolute;
-    top: 20%; right: 55%;
-    background-color: #EE715D;
+    background-color: #DA3D25;
 }
-.secondAnimtionIcon a{
+.bottomSideOtherContent{
+    position: absolute;
+    right: -45%;
+}
+.bottomSideAnimationContent p{
+    width: 50%;
+    color: gray;
+    font-size: 14px;
+}
+.bottomSideAnimationContent a{
     opacity: 0;
     color: #DA3D25;
     pointer-events: none;
@@ -142,44 +174,30 @@ body{
     transition: all 1s ease;
     transform: translateY(20px);
 }
-.secondAnimtionIcon:hover a{
+.bottomSideAnimationContent:hover a{
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
     text-decoration: underline;
 }
-.thirdAnimtionIcon{
-    z-index: 999;
-    width: 100px;
+
+
+.innerChartContainerContent img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+#chart-container{
+    width: 70%;
+    height: 100vh;
     position: absolute;
-    top: 65%; right: 22%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
-.thirdAnimtionIconPlusLine .line{
-    width: 250px;
-    height: 2px;
-    z-index: -1;
-    position: absolute;
-    top: 30%; right: 55%;
-    background-color: #EE715D;
-}
-.thirdAnimtionIcon a{
-    opacity: 0;
-    color: #DA3D25;
-    pointer-events: none;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 1s ease;
-    transform: translateY(20px);
-}
-.thirdAnimtionIcon:hover a{
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-    text-decoration: underline;
-}
-.chartAnimtionIcons > div{
-    visibility: hidden;
-}
+
+
 .firstContent h1,
 .firstContent p{
     visibility: hidden;
@@ -194,28 +212,36 @@ body{
 }
 
 @media (max-width:981px){
-    #chart-container{
-        height: 60vh;
+    .leftSideChartContent{
+        left: -25%;
     }
-    .firstContent{
-        top: 40%; left: 27%;
+    .rightSideChartContent{
+        left: 85%;
     }
-    .secondContent{
-        top: 60%; left: 45%;
+    .bottomSideAnimationContent .line{
+        width: 150px;
     }
-    .thirdContent{
-        top: 40%; right: 9%;
+    .bottomSideOtherContent{
+        left: 70%;
     }
-    .chartAnimtionIcons .line{
-        display: none;
+}
+@media (min-width:1441px){
+    .leftSideChartContent{
+        left: 22%;
     }
-    .firstAnimtionIcon{
-        top: 80%; left: 20%;
+    .rightSideChartContent{
+        left: 64%;
     }
-    .secondAnimtionIcon{
-        top: 80%; left: 40%;
+    .leftSideAnimationContent{
+        left: -10%;
     }
-    .thirdAnimtionIcon{
-        top: 80%; left: 60%;
+    .rightSideAnimationContent{
+        right: -9%;
+    }
+    .bottomSideChartContent{
+        left: 43%;
+    }
+    .bottomSideAnimationContent{
+        left: 60%;
     }
 }
