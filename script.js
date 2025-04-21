@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 setTimeout(function() {
-gsap.to(".chartAnimtionIcons > div", {
+gsap.to(".leftSideAnimationContent > div", {
     duration: 1,
     y: 0,
     opacity: 1,
@@ -9,7 +9,7 @@ gsap.to(".chartAnimtionIcons > div", {
     ease: "power2.out",
     startAt: { y: 50, opacity: 0 }
 });
-gsap.to(".firstContent > h1", {
+gsap.to(".leftSideAnimationContent > p", {
     duration: 1,
     y: 0,
     opacity: 1,
@@ -18,7 +18,7 @@ gsap.to(".firstContent > h1", {
     ease: "power2.out",
     startAt: { y: 50, opacity: 0 }
 });
-gsap.to(".firstContent > p", {
+gsap.to(".rightSideAnimationContent > div", {
     duration: 1,
     y: 0,
     opacity: 1,
@@ -27,7 +27,7 @@ gsap.to(".firstContent > p", {
     ease: "power2.out",
     startAt: { y: 50, opacity: 0 }
 });
-gsap.to(".secondContent > h1", {
+gsap.to(".bottomSideAnimationContent > div", {
     duration: 1,
     y: 0,
     opacity: 1,
@@ -36,7 +36,7 @@ gsap.to(".secondContent > h1", {
     ease: "power2.out",
     startAt: { y: 50, opacity: 0 }
 });
-gsap.to(".secondContent > p", {
+gsap.to(".leftSideChartContent > h1", {
     duration: 1,
     y: 0,
     opacity: 1,
@@ -45,7 +45,7 @@ gsap.to(".secondContent > p", {
     ease: "power2.out",
     startAt: { y: 50, opacity: 0 }
 });
-gsap.to(".thirdContent > h1", {
+gsap.to(".leftSideChartContent > p", {
     duration: 1,
     y: 0,
     opacity: 1,
@@ -54,7 +54,34 @@ gsap.to(".thirdContent > h1", {
     ease: "power2.out",
     startAt: { y: 50, opacity: 0 }
 });
-gsap.to(".thirdContent > p", {
+gsap.to(".rightSideChartContent > h1", {
+    duration: 1,
+    y: 0,
+    opacity: 1,
+    visibility: "visible",
+    stagger: 0.3,
+    ease: "power2.out",
+    startAt: { y: 50, opacity: 0 }
+});
+gsap.to(".rightSideChartContent > p", {
+    duration: 1,
+    y: 0,
+    opacity: 1,
+    visibility: "visible",
+    stagger: 0.3,
+    ease: "power2.out",
+    startAt: { y: 50, opacity: 0 }
+});
+gsap.to(".bottomSideChartContent > h1", {
+    duration: 1,
+    y: 0,
+    opacity: 1,
+    visibility: "visible",
+    stagger: 0.3,
+    ease: "power2.out",
+    startAt: { y: 50, opacity: 0 }
+});
+gsap.to(".bottomSideChartContent > p", {
     duration: 1,
     y: 0,
     opacity: 1,

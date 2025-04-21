@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        svg {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+  opacity: 1; /* Initial opacity */
+}
+
+svg:hover {
+  transform: scale(1.2); /* Increase the size on hover */
+  opacity: 1; /* Ensure full opacity on hover */
+}
+
+svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 3s ease-in-out; /* Transition for smooth effect */
+}
+
+svg:hover path {
+  animation: draw 3s ease-in-out forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+svg path:nth-child(1) {
+  animation-delay: 0s;
+}
+svg path:nth-child(2) {
+  animation-delay: 0.2s;
+}
+svg path:nth-child(3) {
+  animation-delay: 0.4s;
+}
+svg path:nth-child(4) {
+  animation-delay: 0.6s;
+}
+svg path:nth-child(5) {
+  animation-delay: 0.8s;
+}
+svg path:nth-child(6) {
+  animation-delay: 1s;
+}
+svg path:nth-child(7) {
+  animation-delay: 1.2s;
+}
+svg path:nth-child(8) {
+  animation-delay: 1.4s;
+}
+svg path:nth-child(9) {
+  animation-delay: 1.6s;
+}
+svg path:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <svg id="my-svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 170.5 168.6" style="enable-background:new 0 0 170.5 168.6;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+              fill: none;
+              stroke: #000000;
+              stroke-width: 6;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 10;
+          }
+
+          .st1 {
+              fill: none;
+              stroke: #D60909;
+              stroke-width: 9;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 10;
+          }
+
+          .st2 {
+              fill: none;
+              stroke: #D60909;
+              stroke-width: 6;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 10;
+          }
+
+          .st3 {
+              fill: none;
+              stroke: #000000;
+              stroke-width: 9;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 10;
+          }
+        </style>
+              <path class="st2" d="M38.3,16.2c8.6-5.8,22-2.6,22.2,10.3C60.6,36.5,51,44.8,38,37.4" style="stroke-dasharray: 62, 64; stroke-dashoffset: 0;"></path>
+              <path class="st2" d="M60.5,26.6L70,26.6" style="stroke-dasharray: 10, 12; stroke-dashoffset: 0;"></path>
+              <path class="st0" d="M91.8,21.2L113.9,21.2" style="stroke-dasharray: 23, 25; stroke-dashoffset: 0;"></path>
+              <path class="st0" d="M91.8,33.1L113.5,33.1L113.5,46.5" style="stroke-dasharray: 36, 38; stroke-dashoffset: 0;"></path>
+              <path transform="matrix(0.2298 -0.9732 0.9732 0.2298 36.9757 99.0396)" class="st2" d="M70,26.2A11.1,11.1 0,1,1 92.19999999999999,26.2A11.1,11.1 0,1,1 70,26.2" style="stroke-dasharray: 70, 72; stroke-dashoffset: 0;"></path>
+              <path class="st0" d="M99.1,63.1L81.7,78.7" style="stroke-dasharray: 24, 26; stroke-dashoffset: 0;"></path>
+              <path class="st0" d="M132.7,34.5L132.7,53.3" style="stroke-dasharray: 19, 21; stroke-dashoffset: 0;"></path>
+              <path class="st0" d="M129.1,84.1L107.7,106.1" style="stroke-dasharray: 31, 33; stroke-dashoffset: 0;"></path>
+              <path class="st2" d="M111.2,66.9A7.3,7.3 0,1,1 125.8,66.9A7.3,7.3 0,1,1 111.2,66.9" style="stroke-dasharray: 46, 48; stroke-dashoffset: 0;"></path>
+              <path class="st2" d="M99.7,66.9A18.8,18.8 0,1,1 137.3,66.9A18.8,18.8 0,1,1 99.7,66.9" style="stroke-dasharray: 119, 121; stroke-dashoffset: 0;"></path>
+              <path class="st1" d="M48.3,109A28,28 0,1,1 104.3,109A28,28 0,1,1 48.3,109" style="stroke-dasharray: 176, 178; stroke-dashoffset: 0;"></path>
+              <path class="st1" d="M65.39999999999999,109A10.9,10.9 0,1,1 87.2,109A10.9,10.9 0,1,1 65.39999999999999,109" style="stroke-dasharray: 69, 71; stroke-dashoffset: 0;"></path>
+
+              <path transform="matrix(0.7071 -0.7071 0.7071 0.7071 18.2445 96.3649)" class="st2" d="M114.30000000000001,26.2A11.1,11.1 0,1,1 136.5,26.2A11.1,11.1 0,1,1 114.30000000000001,26.2" style="stroke-dasharray: 70, 72; stroke-dashoffset: 0;"></path>
+
+              <path data-async="" data-duration="40" class="st3" width="114.6" height="16.6" d="M28 138.5 L142.6 138.5 L142.6 155.1 L28 155.1 Z" style="stroke-dasharray: 263, 265; stroke-dashoffset: 0;"></path>
+
+
+      </svg>
+</body>
+</html>

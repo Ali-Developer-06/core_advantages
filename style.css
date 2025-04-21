@@ -62,7 +62,7 @@ body{
 
 .leftSideAnimationContent{
     position: absolute;
-    left: -70%;
+    left: -70%; padding-top: 30px;
 }
 .leftSideAnimationImgPlucIcon{
     display: flex;
@@ -70,7 +70,7 @@ body{
 }
 .leftSideAnimationContent .line{
     width: 200px;
-    height: 2px;    
+    height: 2px;
     z-index: -1;
     background-color: #DA3D25;
 }
@@ -198,16 +198,19 @@ body{
 }
 
 
-.firstContent h1,
-.firstContent p{
+.leftSideAnimationContent > div{
     visibility: hidden;
 }
-.secondContent h1,
-.secondContent p{
+.leftSideChartContent h1,
+.leftSideChartContent p{
     visibility: hidden;
 }
-.thirdContent h1,
-.thirdContent p{
+.rightSideChartContent h1,
+.rightSideChartContent p{
+    visibility: hidden;
+}
+.bottomSideChartContent h1,
+.bottomSideChartContent p{
     visibility: hidden;
 }
 
@@ -245,3 +248,71 @@ body{
         left: 60%;
     }
 }
+
+
+
+svg {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    opacity: 1; /* Initial opacity */
+  }
+  
+  svg:hover {
+    transform: scale(1.2); /* Increase the size on hover */
+    opacity: 1; /* Ensure full opacity on hover */
+  }
+  
+  svg path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 3s ease-in-out; /* Transition for smooth effect */
+  }
+  
+  svg:hover path {
+    animation: draw 3s ease-in-out forwards;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  svg path:nth-child(1) {
+    animation-delay: 0s;
+  }
+  svg path:nth-child(2) {
+    animation-delay: 1s;
+  }
+  svg path:nth-child(3) {
+    animation-delay: 1s;
+  }
+  svg path:nth-child(4) {
+    animation-delay: 1s;
+  }
+  svg path:nth-child(5) {
+    animation-delay: 1s;
+  }
+  svg path:nth-child(6) {
+    animation-delay: 1s;
+  }
+  svg path:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  svg path:nth-child(8) {
+    animation-delay: 1.4s;
+  }
+  svg path:nth-child(9) {
+    animation-delay: 1.6s;
+  }
+  svg path:nth-child(10) {
+    animation-delay: 1.8s;
+  }
+  
